@@ -52,16 +52,4 @@ VITE_API_BASE_URL=http://localhost:3001
 | Frontend | React 18, Vite, Tailwind CSS, Radix UI |
 | Server   | Node.js, Express, JWT, in-memory data  |
 
-## What I built vs. what used AI / templates
-
-This is a beginner React learning project. Here is an honest breakdown:
-
-| Part | Who wrote it |
-|------|--------------|
-| Pages, forms, routing, `useState`, `useEffect` | Student (beginner React) |
-| API service files (`services/`) | Student with basic axios |
-| `components/ui/` (shadcn/Radix) | Copied template — not written from scratch |
-| Express backend + JWT auth | AI-assisted (not covered in React course) |
-| Auth context + axios interceptors | AI-assisted |
-
 The app uses simple patterns: local state per page, one auth context, and REST API calls. No Redux, no SignalR, no advanced hooks.
