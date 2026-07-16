@@ -47,7 +47,6 @@ careconnect/
 │   ├── data/store.js       # Seed data
 │   └── server.js
 ├── PROJECT_PLANNING.md     # Timeline, phases, milestones
-├── TEAM_DIVISION.md        # Team ownership + demos
 └── package.json            # Root scripts (run both apps)
 ```
 

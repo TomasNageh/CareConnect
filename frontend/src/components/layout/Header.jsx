@@ -72,10 +72,29 @@ export function Header() {
               <Link to="/clinics" className="text-gray-700 hover:text-blue-600 transition-colors">
                 Find Clinics
               </Link>
-              <a href="#specialties" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <a
+                href="/#specialties"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const el = document.getElementById('specialties');
+                  if (el) {
+                    el.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    navigate('/#specialties');
+                  }
+                }}
+                className="text-gray-700 hover:text-blue-600 transition-colors"
+              >
                 Specialties
               </a>
-              <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <a
+                href="#about"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="text-gray-700 hover:text-blue-600 transition-colors"
+              >
                 About Us
               </a>
             </nav>
@@ -109,16 +128,45 @@ export function Header() {
               </div>
             ) : (
               <nav className="flex flex-col gap-4">
-                <Link to="/doctors" className="text-gray-700 hover:text-blue-600 transition-colors">
+                <Link
+                  to="/doctors"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-gray-700 hover:text-blue-600 transition-colors"
+                >
                   Find Doctors
                 </Link>
-                <Link to="/clinics" className="text-gray-700 hover:text-blue-600 transition-colors">
+                <Link
+                  to="/clinics"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-gray-700 hover:text-blue-600 transition-colors"
+                >
                   Find Clinics
                 </Link>
-                <a href="#specialties" className="text-gray-700 hover:text-blue-600 transition-colors">
+                <a
+                  href="/#specialties"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setMobileMenuOpen(false);
+                    const el = document.getElementById('specialties');
+                    if (el) {
+                      el.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                      navigate('/#specialties');
+                    }
+                  }}
+                  className="text-gray-700 hover:text-blue-600 transition-colors"
+                >
                   Specialties
                 </a>
-                <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">
+                <a
+                  href="#about"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setMobileMenuOpen(false);
+                    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="text-gray-700 hover:text-blue-600 transition-colors"
+                >
                   About Us
                 </a>
                 <div className="flex flex-col gap-2 pt-4 border-t border-gray-200">

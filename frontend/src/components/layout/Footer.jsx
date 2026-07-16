@@ -1,8 +1,11 @@
 import { Heart, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 
 export function Footer() {
+  const navigate = useNavigate();
+
   return (
-    <footer className="bg-gray-900 text-gray-300 mt-64">
+    <footer id="about" className="bg-gray-900 text-gray-300 mt-64 scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
@@ -37,16 +40,39 @@ export function Footer() {
             <h3 className="text-white text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/doctors" className="hover:text-blue-400 transition-colors">Find Doctors</a>
+                <Link to="/doctors" className="hover:text-blue-400 transition-colors">Find Doctors</Link>
               </li>
               <li>
-                <a href="#specialties" className="hover:text-blue-400 transition-colors">Specialties</a>
+                <a
+                  href="/#specialties"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const el = document.getElementById('specialties');
+                    if (el) {
+                      el.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                      navigate('/#specialties');
+                    }
+                  }}
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  Specialties
+                </a>
               </li>
               <li>
-                <a href="#clinics" className="hover:text-blue-400 transition-colors">Clinics</a>
+                <Link to="/clinics" className="hover:text-blue-400 transition-colors">Find Clinics</Link>
               </li>
               <li>
-                <a href="#about" className="hover:text-blue-400 transition-colors">About Us</a>
+                <a
+                  href="#about"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  About Us
+                </a>
               </li>
             </ul>
           </div>

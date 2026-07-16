@@ -1,7 +1,7 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState } from 'react';
 import * as authAPI from '../services/auth.js';
 
-const AuthContext = createContext(undefined);
+const AuthContext = createContext(null);
 
 function normalizeRole(role) {
   if (!role) return '';
@@ -22,27 +22,26 @@ function buildUser(response, extra = {}) {
 }
 
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState(null);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState(() => {
+    const userData = localStorage.getItem('user');
+    if (!userData) return null;
+    try {
+      return JSON.parse(userData);
+    } catch (error) {
+      console.error('Error parsing saved user:', error);
+      localStorage.removeItem('token');
+      localStorage.removeItem('user');
+      return null;
+    }
+  });
 
-  useEffect(() => {
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
     const token = localStorage.getItem('token');
     const userData = localStorage.getItem('user');
+    return !!(token && userData);
+  });
 
-    if (token && userData) {
-      try {
-        setUser(JSON.parse(userData));
-        setIsAuthenticated(true);
-      } catch (error) {
-        console.error('Error loading saved user:', error);
-        localStorage.removeItem('token');
-        localStorage.removeItem('user');
-      }
-    }
-
-    setLoading(false);
-  }, []);
+  const loading = false;
 
   const login = async (email, password) => {
     const response = await authAPI.login(email, password);
@@ -112,6 +111,7 @@ export function AuthProvider({ children }) {
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useAuth() {
   const context = useContext(AuthContext);
   if (!context) {

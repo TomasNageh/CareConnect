@@ -164,6 +164,4 @@ Require token + **Patient** or **Doctor**.
 | GET | `/api/chat/history/:otherUserId` | Messages with one user |
 | POST | `/api/chat/send` | Send a message |
 
-No SignalR — REST only. Frontend loads, sends, refreshes.
-
 ---
