@@ -8,6 +8,8 @@ The application is a React single-page app backed by a local Express mock API wi
 
 | Document | Description |
 |----------|-------------|
+| [PROJECT_PLANNING.md](./PROJECT_PLANNING.md) | Timeline, phases, milestones, risks |
+| [TEAM_DIVISION.md](./TEAM_DIVISION.md) | Who owns what + checklists + demos |
 | [frontend/README.md](./frontend/README.md) | Frontend structure and conventions |
 | [server/README.md](./server/README.md) | API endpoints and server notes |
 
@@ -45,7 +47,8 @@ careconnect/
 │   ├── middleware/         # JWT
 │   ├── data/store.js       # Seed data
 │   └── server.js
-├── TEAM_DIVISION.md
+├── PROJECT_PLANNING.md     # Timeline, phases, milestones
+├── TEAM_DIVISION.md        # Team ownership + demos
 └── package.json            # Root scripts (run both apps)
 ```
 
