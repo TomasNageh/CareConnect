@@ -1,0 +1,36 @@
+Design a modern healthcare booking platform called CareConnect, similar to Vezeeta. Professional, trustworthy, clean layout with soft color palette, intuitive icons, clear CTAs, modern typography. Responsive for desktop and mobile.
+
+KEY SCREENS: Homepage, Search Results, Doctor Profile, Booking Flow, Patient Dashboard, Doctor Dashboard, Admin Dashboard, Clinic Pages, Chat Interface, Authentication screens. Include realistic content and sample data.
+
+HOMEPAGE: Clean layout with prominent search bar, specialty categories, featured doctors, promotions, quick access to services, clear navigation.
+
+AUTHENTICATION: Login (email/password). Registration: Patient (username, email, password, first name, last name, DOB, phone, address), Doctor (username, email, password, first name, last name, specialty, license, bio), Admin (username, email, password, first name, last name). JWT auth with role-based access (Patient/Doctor/Admin).
+
+DOCTOR SEARCH & FILTERS: Search by specialty, location, ratings, availability date. Filter/sort options. Results show: name, specialty, bio, rating, image, verification badge, clinic locations. Pagination. Public access.
+
+DOCTOR PROFILE: Photo, specialty, qualifications, license, bio, ratings, reviews with comments, availability calendar, time slots, clinic locations, operating hours, 'Book Appointment' button.
+
+BOOKING SYSTEM: Step-by-step: select doctor, choose clinic, pick date from calendar, select time slot, add notes, confirm. Availability validation, conflict checking, booking limits. Statuses: Confirmed, Cancelled, Completed.
+
+PATIENT DASHBOARD: Upcoming appointments, past visits, medical records (visit date, diagnosis, treatment, prescription, notes), reviews given, profile management (edit, upload image), notifications with unread count.
+
+DOCTOR DASHBOARD: Stats cards (appointments today/week/month, total patients, avg rating), upcoming appointments list (top 10: patient name, date, time, clinic), clinic management, availability calendar, patient history access, notifications.
+
+CLINIC PAGES: Details (name, address, city, country, phone, email), location map/embed, available doctors, services, operating hours, contact info, verification badge.
+
+REVIEWS & RATINGS: Patients rate doctors (1-5 stars) with comments. Display on doctor profile. View/update/delete reviews. Auto rating calculation.
+
+MEDICAL HISTORY: Patients view/add/update/delete records (visit date, diagnosis, treatment, prescription, notes). Doctors view patient history (patients with appointments only).
+
+REAL-TIME CHAT: Patient-Doctor messaging with conversation list (name, role, last message, timestamp, unread count). Chat history (sender/receiver info, message, time, read status). SignalR real-time delivery. Patient-Doctor pairs only.
+
+NOTIFICATIONS: Center showing title, message, type (AppointmentBooked/Cancelled/Reminder, DoctorVerified, NewMessage, ReviewReceived, ComplaintReceived), read status, timestamp. Unread count, mark read, delete, pagination.
+
+ADMIN DASHBOARD: User management table (filter by role, shows ID, username, email, role, active, created, name), view/update/delete/activate. Doctor verification (pending list: ID, name, specialty, license, email, verify action). Clinic verification (pending list: ID, doctor, name, address, city, country, verify action). Analytics dashboard (total users/patients/doctors/appointments, active clinics, popular specialties chart top 10). Reports: appointments (date range, total/confirmed/cancelled/completed), users (date range, new users/patients/doctors). Complaints: view all (filter by status, shows ID, patient/doctor names, subject, description, status, dates), view/create/update/resolve/delete.
+
+DOCTOR FEATURES: Profile (view/edit, upload image). Clinics (create/view/update/delete: name, address, city, country, phone, email, location embed). Operating hours (add/update/delete: day, start/end time, closed per clinic). Availability (set: clinic, date, start/end time, available, max bookings; view with date filters; update/delete with conflict checking). Appointments (view all/details, statuses).
+
+VISUAL STYLE: Professional healthcare aesthetic, soft colors (blues, greens, whites), clean layouts, intuitive icons, clear CTAs, modern typography, card components, smooth transitions, loading/empty states, error/success messages, delete confirmations, responsive grids.
+
+TECHNICAL: JWT auth, role authorization, file upload (images: jpg/jpeg/png, 5MB max), pagination, date/time pickers, filters/search, SignalR real-time chat, form validation, responsive design.
+
