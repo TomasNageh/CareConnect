@@ -1,9 +1,9 @@
 import { Search, MapPin, Menu, Heart, Calendar, User as UserIcon, LogOut, LayoutDashboard } from 'lucide-react';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
+import { Button } from '../ui/button';
+import { Input } from '../ui/input';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../../contexts/AuthContext';
 import { toast } from 'sonner';
 import {
   DropdownMenu,
@@ -11,7 +11,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
   DropdownMenuSeparator,
-} from './ui/dropdown-menu';
+} from '../ui/dropdown-menu';
 import { Navbar } from './Navbar';
 
 export function Header() {

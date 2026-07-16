@@ -1,12 +1,12 @@
 import { Star, MapPin, Calendar, MessageCircle } from 'lucide-react';
-import { Card } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { Card } from '../ui/card';
+import { Button } from '../ui/button';
+import { Badge } from '../ui/badge';
+import { ImageWithFallback } from '../shared/ImageWithFallback';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import * as patientAPI from '../services/patient';
-import { useAuth } from '../contexts/AuthContext';
+import * as patientAPI from '../../services/patient';
+import { useAuth } from '../../contexts/AuthContext';
 import { toast } from 'sonner';
 
 export function FeaturedDoctors() {

@@ -1,8 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { LayoutDashboard, MessageCircle, Search, Building2, Bell, User as UserIcon, LogOut, Home } from 'lucide-react';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { useAuth } from '../contexts/AuthContext';
+import { Button } from '../ui/button';
+import { Badge } from '../ui/badge';
+import { useAuth } from '../../contexts/AuthContext';
 import { useState, useEffect } from 'react';
 import {
   DropdownMenu,
@@ -10,9 +10,9 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
   DropdownMenuSeparator,
-} from './ui/dropdown-menu';
-import * as patientAPI from '../services/patient';
-import * as doctorAPI from '../services/doctor';
+} from '../ui/dropdown-menu';
+import * as patientAPI from '../../services/patient';
+import * as doctorAPI from '../../services/doctor';
 import { toast } from 'sonner';
 
 export function Navbar() {

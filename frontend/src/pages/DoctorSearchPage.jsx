@@ -5,7 +5,7 @@ import { Card } from '../components/ui/card';
 import { Input } from '../components/ui/input';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
-import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { ImageWithFallback } from '../components/shared/ImageWithFallback';
 import * as patientAPI from '../services/patient';
 import { useAuth } from '../contexts/AuthContext';
 import { toast } from 'sonner';

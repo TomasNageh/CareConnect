@@ -1,8 +1,8 @@
-import { Card } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
+import { Card } from '../ui/card';
+import { Button } from '../ui/button';
+import { Badge } from '../ui/badge';
 import { Clock, Percent } from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { ImageWithFallback } from '../shared/ImageWithFallback';
 import { useNavigate } from 'react-router-dom';
 
 const promotions = [

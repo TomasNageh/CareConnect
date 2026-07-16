@@ -6,7 +6,7 @@ import { Badge } from '../components/ui/badge';
 import { Button } from '../components/ui/button';
 import { useAuth } from '../contexts/AuthContext';
 import * as patientAPI from '../services/patient';
-import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { ImageWithFallback } from '../components/shared/ImageWithFallback';
 import { toast } from 'sonner';
 
 export default function ClinicPage() {

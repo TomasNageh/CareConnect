@@ -6,9 +6,9 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from './ui/select';
-import { Button } from './ui/button';
-import { Label } from './ui/label';
+} from '../ui/select';
+import { Button } from '../ui/button';
+import { Label } from '../ui/label';
 
 const specialties = [
   { name: 'Cardiology', value: 'Cardiology' },

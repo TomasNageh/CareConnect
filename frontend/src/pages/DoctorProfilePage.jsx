@@ -8,7 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs'
 import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '../components/ui/dialog';
-import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { ImageWithFallback } from '../components/shared/ImageWithFallback';
 import { useAuth } from '../contexts/AuthContext';
 import * as patientAPI from '../services/patient';
 import { toast } from 'sonner';

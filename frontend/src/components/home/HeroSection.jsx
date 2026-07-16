@@ -1,7 +1,7 @@
 import { Search, MapPin } from 'lucide-react';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { Button } from '../ui/button';
+import { Input } from '../ui/input';
+import { ImageWithFallback } from '../shared/ImageWithFallback';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
