@@ -8,8 +8,7 @@ The application is a React single-page app backed by a local Express mock API wi
 
 | Document | Description |
 |----------|-------------|
-| [PROJECT_PLANNING.md](./PROJECT_PLANNING.md) | Timeline, phases, milestones, risks |
-| [TEAM_DIVISION.md](./TEAM_DIVISION.md) | Who owns what + checklists + demos |
+| [PROJECT_PLANNING.md](docs/PROJECT_PLANNING.md) | Timeline, phases, milestones, risks |
 | [frontend/README.md](./frontend/README.md) | Frontend structure and conventions |
 | [server/README.md](./server/README.md) | API endpoints and server notes |
 
